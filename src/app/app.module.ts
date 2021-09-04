@@ -5,6 +5,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { PersonaComponent } from './components/persona/persona.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
+import { LoggingServiceService } from './logging-service.service';
+import { PersonaService } from './persona.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,10 @@ import { FormularioComponent } from './components/formulario/formulario.componen
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    LoggingServiceService,
+    PersonaService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
